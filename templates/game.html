@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+</head>
+<body>
+<style>
+ 
+ td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+</style>
+<table>
+  <thead>
+    <tr>
+        <th>Steam app ID</th>
+        <th>Name</th>
+        <th>Release Date</th>
+        <th>Review Score</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in games %}    
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table></body>
+</html>
