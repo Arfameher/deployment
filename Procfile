@@ -1,1 +1,1 @@
-worker: python flask_app.py --log-file -
+web: bundle exec thin start -p $PORT
