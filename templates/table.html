@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div align='middle'><h1>{% block title %} Games {% endblock %}</h1></div>
+    <style>
+ 
+        td {
+               width: 150px;
+               text-align: center;
+               border: 1px solid black;
+               padding: 5px;
+             }
+    </style>
+    <table align="center">
+        
+        <thead>
+          <tr>
+              <th>Steam_appID</th>
+              <th>Name</th>
+              <th>Genres</th>
+              <th>Price(€)</th>
+          </tr>
+          </thead>    
+          <tbody>
+           {% for row in games %}    
+                  <tr>
+                      <td>{{ row[0] }}</td>
+                      <td>{{ row[1] }}</td>
+                      <td>{{ row[5] }}</td>
+                      <td>&#8364;{{ row[8] }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+       
+    </table>
+{% endblock %}
