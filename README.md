@@ -15,7 +15,7 @@ To visualize some interesting aspects about this scraped steam data. Here is a j
 
 Objectives of the Project :
 <p align="center">
-  <img src="https://github.com/Arfameher/deployment/blob/main/Images/Screenshot%20from%202021-12-26%2022-29-07.png?raw=true" />
+  <img src="https://github.com/Arfameher/deployment/blob/main/static/Screenshot%20from%202021-12-26%2022-29-07.png?raw=true" />
 </p>
 
 ***
