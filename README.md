@@ -1,9 +1,10 @@
-# Steam Dataset Analysis -- Deployment 
+# Steam Dataset Analysis --  Deployment-flask-heroku  
 To give a brief itroduction of this project you can refer to the description below.
 - `Deployment strategy` :
-  - GitHub page
-  - Heroku
-  - Jupyter Notebook
+  - GitHub page - code with data cleaning and analysis.
+  - Heroku - Deployed webpage
+  - https://steam-games-analysis.herokuapp.com/
+  - Jupyter Notebook - 
   - Python file
 <p align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ30L8aV7_xXsF65jwQYIbIgGSoXFhBWgclpA&usqp=CAU" />
@@ -20,7 +21,7 @@ Objectives of the Project :
 
 ***
 ### Installation
-Before running this code you need to have anaconda installed in your system and jupyter notebook running with basic libraries or Python IDE such as [Visual Studio Code](https://code.visualstudio.com/)
+To run this code you need to have anaconda installed in your system and jupyter notebook running with basic libraries or Python IDE such as [Visual Studio Code](https://code.visualstudio.com/)
 
 To run this code you have to clone the repository or download it as a zip file and run it. But before that we need to install some libraries to run this code.
 
@@ -37,20 +38,65 @@ To install all these libraries do the folling steps:
         ```javascript
         pip install -r requirements.txt
         ``` 
+***
+### Running the project
 
-Once you are through with the installation 
+1. Once you are through with the installation, Ensure that you are in the project home directory. Run `flask_app.py` using below command to start Flask API
+    ```javascript
+    python flask_app.py
+    ```
+2. By default, flask will run on port 5000.
+    ```javascript
+    Navigate to URL http://localhost:5000
+    ```
+You should be able to view the homepage as below:
+<p align="center"><img src=""/>
+</p>
+
+You are now able to view a navigation menu --> 
+
+Home - which displays a table with information on all the games with genre, release date and price in EUR.
+
+Insights - which displays some of the insights that i have found from the dataset.
+
+3. You can also view the deployed webpage on heroku by clicking on the link below :
+    ```javascript
+    https://steam-games-analysis.herokuapp.com/
+    ```
+
 ***
 ### Repo Architecture
+#### Dataset 
+- Contains the clean dataset of games required for analysis in a csv file format.
 
+#### templates 
+- Contains the templates of html required to deploy the web page using flask.
 
-#### 
+#### Jupyter notebook 
+- `01.Create_database.ipynb` : To parse json file and read it in SQL database format.
+- `02.Steam_Data_Cleaning.ipynb` : To clean the dataset and extract the values from the dictionaries within.
+- `03.Data_Visualization.ipynb` : To visualize the clean dataset and extract the valuable insights.
+
+#### Python file 
+- `create_database.py` : Python file parse json file and read it in SQL database format.
+- `flask_app_MVP.py` : Deployed the basic MVP to test. 
+- `flask_app.py` : Python file that creates a webpage and then build a docker image and deploy it on heroku.
+
 #### requirements.txt 
+- Gives all the required libraries to run this code. Also required to deploy the web page online if we deploy through github.
 
-- Gives all the required libraries to run this code. Also required to deploy the web page online.
+#### Dockerfile
 
-***
-### Usage
+#### Procfile
+OK, one more necessary plaintext file: Heroku needs a file to tell it how to start up the web app. By convention, this file is just a plaintext file is called (and named): Procfile:
 
+    A Procfile is a text file in the root directory of your application that defines process types and explicitly declares what command should be executed to start your app.
+
+And for now, Procfile can contain just this line:
+
+`web: gunicorn app:app flask_app`
+
+#### heroku.yml 
 
 ***
 ### Visuals
@@ -58,8 +104,12 @@ Once you are through with the installation
 
 ***
 ### References
+Referred to the docs of flask, heroku and docker.
+https://devcenter.heroku.com/categories/deploying-with-docker
 
+https://flask-doc.readthedocs.io/en/latest/
 
+https://docs.docker.com/
 
 ***
 ### Contributors
