@@ -50,7 +50,7 @@ To install all these libraries do the folling steps:
     Navigate to URL http://localhost:5000
     ```
 You should be able to view the homepage as below:
-<p align="center"><img src=""/>
+<p align="center"><img src="https://github.com/Arfameher/deployment/blob/main/static/Screenshot%20from%202021-12-28%2011-12-20.png?raw=true"/>
 </p>
 
 You are now able to view a navigation menu --> 
@@ -100,7 +100,11 @@ And for now, Procfile can contain just this line:
 
 ***
 ### Visuals
+<p align="center"><img src="https://github.com/Arfameher/deployment/blob/main/static/Screenshot%20from%202021-12-28%2011-08-26.png?raw=true"/>
+</p>
 
+<p align="center"><img src="https://github.com/Arfameher/deployment/blob/main/static/Screenshot%20from%202021-12-28%2011-08-35.png?raw=true"/>
+</p>
 
 ***
 ### References
